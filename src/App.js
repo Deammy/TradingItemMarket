@@ -1,24 +1,31 @@
 import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Authentication } from './Auth';
+import { LoginPage, RegisterPage } from './Login/Login-out';
+import { LoginRouter, MainRouter } from './MainRouter';
+import { Home } from './Home';
+import { AddProduct } from './AddProduct';
+import { useLayoutEffect } from 'react';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Authentication>
+      <BrowserRouter>
+        <Routes>
+          <Route element = {<LoginRouter/>}>
+            <Route path = '/login' element = {<LoginPage/>}/>
+            <Route path = '/register' element = {<RegisterPage/>}/>
+          </Route>
+          <Route element = {<MainRouter/>}>
+            <Route path = "/" element = {<Home/>}/>
+            <Route path = "/product" element = {<AddProduct/>}/>
+          </Route>
+        </Routes>
+      
+      </BrowserRouter>
+
+    </Authentication>
   );
 }
 
