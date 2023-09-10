@@ -7,6 +7,7 @@ import { Home } from './Home';
 import { AddProduct } from './AddProduct';
 import { useLayoutEffect } from 'react';
 import { NavBar } from './Nav';
+import { ProfilePage } from './Profile';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route element = {<NavBar/>}>
               <Route path = "/" element = {<Home/>}/>
               <Route path = "/product" element = {<AddProduct/>}/>
+              <Route path = "/profile" element = {<ProfilePage/>}/>
             </Route>
             
           </Route>

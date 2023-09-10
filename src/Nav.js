@@ -40,10 +40,12 @@ export const NavBar = () =>{
                 </div>
             </Link>
             <div className='nav-underline'/>
-            <div className='nav-button' id='nav-sidebar-move'>
-                <img src={require('./PicAndIcon/user.png')}/>
-                <span>Profile</span>
-            </div>
+            <Link to ="/profile">
+                <div className='nav-button' id='nav-sidebar-move'>
+                    <img src={require('./PicAndIcon/user.png')}/>
+                    <span>Profile</span>
+                </div>
+            </Link>
             <div className='nav-contact-me' id='nav-sidebar-move'>
                 <div className='nav-contact-me-text' id='nav-sidebar-move'>
                     <span>Contact</span>

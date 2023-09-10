@@ -1,14 +1,15 @@
 import { useEffect, useRef } from "react"
 import {Link, useNavigate} from "react-router-dom"
 import { useAuth } from "../Auth"
+import '../CssFile/Login.css'
 export const LoginPage = () =>{
     
     const emailRef = useRef("")
     const passwordRef = useRef("")
     const auth = useAuth()
-    return<div className="bg-neutral-800 h-screen " >
+    return<div className="bg-gradient-to-b from-neutral-800 from 40% to-neutral-900 to-80% h-screen " >
         <div className="flex justify-center items-center  pt-16">
-            <img src = {require("../PicAndIcon/settings.png")} className=" w-40 fill-white animate-spin"/>
+            <img src = {require("../PicAndIcon/settings.png")} className=" w-40 animate-spin logo"/>
         </div>
         <div className="flex justify-center items-center pt-16">
             <input ref = {emailRef} type = "email" placeholder="Email..."  className=" bg-neutral-100 hover:bg-neutral-100 rounded h-10 w-80 shadow-md"/>
@@ -43,8 +44,8 @@ export const RegisterPage = () =>{
     const passwordRef = useRef("")
     const auth = useAuth()
     const navigate = useNavigate()
-    return<div className="bg-neutral-800 h-screen flex justify-center shadow-sm" >
-        <div className = " items-center bg-neutral-600 w-1/4 mr-0 h-fit mt-28 rounded-3xl shadow-2xl">
+    return<div className="bg-gradient-to-b from-neutral-800 from 40% to-neutral-900 to-80% h-screen flex justify-center shadow-sm" >
+        <div className = " bg-gradient-to-b from-neutral-500 to-neutral-700 to-100% items-center w-1/4 mr-0 h-fit mt-28 rounded-3xl shadow-2xl">
             <div className="flex justify-center items-center pt-4">
                 <a className=" text-white text-4xl">
                     Register

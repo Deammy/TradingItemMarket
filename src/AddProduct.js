@@ -26,6 +26,13 @@ export const AddProduct = () =>{
             setData(Array.from(data.data))
         })
     },[])
+
+    const EnterComplete =()=>{
+        return <div className="h-36 w-52 bg-lime-400">
+            Hello
+        </div>
+    }
+
     return <div className="bg-neutral-800">
             <div className=" inline-flex">
                 <div className=" bg-neutral-800 h-screen ml-20">
@@ -45,14 +52,18 @@ export const AddProduct = () =>{
                                 cost : cost.current.value,
                                 userID : auth.user
                             })
+                            setSearch("")
+                            cost.current.value = ""
                         }}>
                             Enter
                         </button>
                     </div>
+
+
                     <div className=" bg-neutral-300 w-56 h-fit ms-10 mt-10 rounded-md overflow-hidden">
                     {show.map((d,index) =>{
                             return <div key = {index}>
-                                <div className=" transition-colors flex justify-center place-content-center hover:bg-neutral-500 hover:shadow-md active:bg-neutral-600" onClick={()=>{
+                                <div className=" transition-colors flex justify-center place-content-center hover:bg-neutral-500 hover:shadow-md active:bg-neutral-600 text-lg" onClick={()=>{
                                     setSearch(d)
                                 }}>{d}</div>
                             </div>
