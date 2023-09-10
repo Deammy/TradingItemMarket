@@ -1,0 +1,164 @@
+@font-face {
+    font-family: mainFont;
+    src: url(PKMaehongsonMedium.otf);
+}
+nav{
+    z-index: 100;
+    width: 250px;
+    height: 100%;
+    background-color: #2E2E2E;;
+    position: fixed;
+    display: block;
+    transition: ease-in-out 0.25s;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 0px 15px;
+}
+nav.active{
+    width : 50px;
+}
+.nav-menu{
+    width: 30px;
+    margin-bottom: 80px;
+    margin-left: 3%;
+    cursor: pointer;
+}
+.nav-menu img{
+    width : 25px;
+    height : 25px;
+    position: absolute;
+    margin-left : 10px;
+    margin-top: 5px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+.nav-menu img:hover{
+    filter: invert(60%);
+    -webkit-filter: invert(60%);
+}
+.nav-menu:active{
+    transition: 0.3s;
+    filter: invert(40%);
+    -webkit-filter: invert(40%);
+}
+.nav-topic{
+    position: relative;
+    width: 100%;
+    color : white;
+    font-size: 50px;
+    transition: 0.2s;
+}
+.nav-topic.active{
+    transition: 0.2s;
+    opacity: 0;
+}
+.nav-button{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 30px;
+
+    border-radius: 20px;
+    color: white;
+    height: 40px;
+    font-family: mainFont;
+}
+.nav-button.active{
+    border-radius: 3px;
+}
+.nav-button:hover{
+    color : black;
+    background-color: white;
+}
+.nav-button:active{
+    background-color: #515151;
+}
+
+.nav-button img{
+    width : 25px;
+    height : 25px;
+    position: absolute;
+    margin-left : 10px;
+    margin-top: 5px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+.nav-button:hover img{
+    /* Invert Pic Color */
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
+}
+.nav-button span{
+    position:absolute;
+    font-size : 25px;
+    margin-left : 20%;
+    transition: ease-in-out 0.3s;
+    margin-top: 5px;
+}
+.nav-button.active span{
+    transition: 0.2s;
+    opacity: 0;
+}
+
+
+.nav-underline{
+    margin-left : 10%;
+    margin-right : 10%;
+    margin-top: 30px;
+    height: 5px;
+    background-color: #131313;
+    border-radius: 5px;
+}
+
+.nav-contact-me{
+    align-content: center;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    height: fit-content;
+    font-family: mainFont;
+}
+.nav-contact-me-text{
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size : 25px;
+    transition: ease-in-out 0.3s;
+}
+.nav-contact-me-text.active{
+    transition: 0.2s;
+    opacity: 0;
+}
+.nav-contact-me img {
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 150px;
+    min-width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 0px 15px;
+    transition: 0.3s 0.1s
+    
+    
+}
+.nav-contact-me :hover {
+    border-radius: 30px;
+}
+.nav-contact-me.active img {
+    transition: 0.2s;
+    opacity: 0;
+}
+.center {
+    margin: auto;
+    width: 50%;
+}
+.nav-button.active img.git{
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+}
+.me-profile{
+    margin-top: 20px;
+}

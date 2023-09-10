@@ -6,6 +6,7 @@ import { LoginRouter, MainRouter } from './MainRouter';
 import { Home } from './Home';
 import { AddProduct } from './AddProduct';
 import { useLayoutEffect } from 'react';
+import { NavBar } from './Nav';
 
 function App() {
 
@@ -18,8 +19,11 @@ function App() {
             <Route path = '/register' element = {<RegisterPage/>}/>
           </Route>
           <Route element = {<MainRouter/>}>
-            <Route path = "/" element = {<Home/>}/>
-            <Route path = "/product" element = {<AddProduct/>}/>
+            <Route element = {<NavBar/>}>
+              <Route path = "/" element = {<Home/>}/>
+              <Route path = "/product" element = {<AddProduct/>}/>
+            </Route>
+            
           </Route>
         </Routes>
       

@@ -18,14 +18,18 @@ export const Home = () =>{
         getData();
     }
 
-    return <div className=" bg-neutral-800 h-screen">
-        {table.map((d,index) =>{
-            return <div key = {index}>
-                <li>{d.Name}</li>
-                <li>{d.Cost}</li>
-            </div>
-        })}
-            <Link to = "/product"><button className=" transition-colors bg-neutral-100 w-48 h-14 rounded-xl text-3xl hover:bg-neutral-200 active:bg-neutral-400">Sell?</button></Link>
-        
+    return <div className=" bg-neutral-800 h-screen flex justify-center place-content-center">
+        <div className=" bg-neutral-400 h-fit w-fit justify-center place-content-center">
+            {table.map((d,index) =>{
+                return <div key = {index} className=" transition-colors flex justify-center place-content-center">
+                    <div >
+                        {d.Name}
+                    </div>
+                    <div>
+                        {d.Cost}
+                    </div>
+                </div>
+            })}
+        </div>
     </div>
 }

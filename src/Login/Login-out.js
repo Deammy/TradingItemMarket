@@ -8,7 +8,7 @@ export const LoginPage = () =>{
     const auth = useAuth()
     return<div className="bg-neutral-800 h-screen " >
         <div className="flex justify-center items-center  pt-16">
-            <img src = {require("../Pic/settings.png")} className=" w-40 fill-white animate-spin"/>
+            <img src = {require("../PicAndIcon/settings.png")} className=" w-40 fill-white animate-spin"/>
         </div>
         <div className="flex justify-center items-center pt-16">
             <input ref = {emailRef} type = "email" placeholder="Email..."  className=" bg-neutral-100 hover:bg-neutral-100 rounded h-10 w-80 shadow-md"/>
